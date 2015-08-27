@@ -24,9 +24,9 @@ meaning that for example, the trace-token is kept and propagated to other nodes
 and the trace might be finished somewhere else, but no special metrics are added"
 
 
-## Steps get this running and display some cool stuff :
+## Steps to get this running and display some cool stuff :
 
-Kamon provides a docker image with statds/grafana : [https://github.com/kamon-io/docker-grafana-graphite] . 
+Kamon provides a [docker image with statds/grafana](https://github.com/kamon-io/docker-grafana-graphite) . 
 Use the following command to get it and run it
 
 ```
@@ -45,7 +45,8 @@ In five different terminals, start the following programs :
  
 Now, on the dashboard, the hostname of your machine should appear (which means that your programs successfully sent
 metrics to statsd). If it doesn't, try switching from the akka dashboard to the OS one (there's an icon on the top right
-that looks like a folder). 
+that looks like a folder). You can edit each graph to show different metrics (please read Kamon's documentation), or 
+specify the name of the actors you would like to see metrics from...
 
 In addition, you should start visualizing metrics without doing anything else. Sometimes the docker container isn't 
  in the same timezone as the browser, which the dashboard should warn you about. 
